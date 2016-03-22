@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="data_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-Y5-1Ry">
+                                <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <segue destination="Nka-Dk-Rdy" kind="showDetail" identifier="showDetail" id="5fE-DY-IH8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-mE-TyI">
+                                <rect key="frame" x="194" y="66" width="213" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="j7G-se-Ulh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9MB-mE-TyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1M9-dp-Zam"/>
+                            <constraint firstItem="9MB-mE-TyI" firstAttribute="top" secondItem="Qhl-Y5-1Ry" secondAttribute="bottom" constant="8" id="8KO-kk-br4"/>
+                            <constraint firstItem="Qhl-Y5-1Ry" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fea-Vv-sqg"/>
+                            <constraint firstItem="Qhl-Y5-1Ry" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pJM-9m-NNe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helloTextField" destination="9MB-mE-TyI" id="5a5-PE-UHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="535"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xqv-pn-bJa">
+            <objects>
+                <viewController id="Nka-Dk-Rdy" customClass="DetailViewController" customModule="data_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="raL-cb-KjE"/>
+                        <viewControllerLayoutGuide type="bottom" id="IvA-3X-Tb5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YhA-RX-sZg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="And-aN-Zwv">
+                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="And-aN-Zwv" firstAttribute="centerX" secondItem="YhA-RX-sZg" secondAttribute="centerX" id="ht7-Ng-WeO"/>
+                            <constraint firstItem="And-aN-Zwv" firstAttribute="top" secondItem="raL-cb-KjE" secondAttribute="bottom" constant="8" id="rvA-XZ-Sjc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="And-aN-Zwv" id="oko-In-IRf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37M-yL-94d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="1407"/>
+        </scene>
+    </scenes>
+</document>
